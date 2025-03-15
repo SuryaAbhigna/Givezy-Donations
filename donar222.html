@@ -1,0 +1,65 @@
+import React from "react";
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold text-gray-800">Welcome to the Donation Platform</h1>
+      <p className="mt-4 text-lg text-gray-600">Make a difference by donating today!</p>
+      <div className="mt-6 space-x-4">
+        <Link href="/donate">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            Make a Donation
+          </button>
+        </Link>
+        <Link href="/login">
+          <button className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">
+            Login
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// Authentication Pages
+export function Login() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+      <div className="bg-white p-8 rounded shadow-lg w-96">
+        <h2 className="text-2xl font-bold text-gray-800">Login</h2>
+        <input type="email" placeholder="Email" className="w-full mt-4 p-2 border rounded" />
+        <input type="password" placeholder="Password" className="w-full mt-4 p-2 border rounded" />
+        <button className="w-full mt-6 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+      </div>
+    </div>
+  );
+}
+
+export function Signup() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+      <div className="bg-white p-8 rounded shadow-lg w-96">
+        <h2 className="text-2xl font-bold text-gray-800">Signup</h2>
+        <input type="text" placeholder="Name" className="w-full mt-4 p-2 border rounded" />
+        <input type="email" placeholder="Email" className="w-full mt-4 p-2 border rounded" />
+        <input type="password" placeholder="Password" className="w-full mt-4 p-2 border rounded" />
+        <button className="w-full mt-6 bg-green-600 text-white py-2 rounded hover:bg-green-700">Signup</button>
+      </div>
+    </div>
+  );
+}
+
+// Donation Page
+export function Donate() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+      <div className="bg-white p-8 rounded shadow-lg w-96">
+        <h2 className="text-2xl font-bold text-gray-800">Donate Now</h2>
+        <input type="text" placeholder="Item Name" className="w-full mt-4 p-2 border rounded" />
+        <textarea placeholder="Description" className="w-full mt-4 p-2 border rounded"></textarea>
+        <button className="w-full mt-6 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Submit Donation</button>
+      </div>
+    </div>
+  );
+}

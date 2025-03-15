@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENT SCRIPT SHEET</title>
+    <style>
+        body {
+            background-color: rgb(186, 175, 237);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: white;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label, input, select, button, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: rgb(74, 155, 205);
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+        .info-box {
+            border: 1px solid green;
+            padding: 20px;
+            border-radius: 9px;
+            background: #f9f9f9;
+            margin-bottom: 50px;
+        }
+    </style>
+    <script>
+        function showFoodForm(event) {
+            event.preventDefault();
+            document.getElementById('agentForm').style.display = 'none';
+            document.getElementById('foodForm').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Agent Application</h1>
+        <form id="agentForm" onsubmit="showFoodForm(event)">
+            <label for="agent-name">Name:</label>
+            <input type="text" id="agent-name" name="agent-name" required>
+
+            <label for="agent-id">Agent ID:</label>
+            <input type="text" id="agent-id" name="agent-id" required>
+
+            <button type="submit">Submit Agent Form</button>
+        </form>
+
+        <form id="foodForm" style="display: none;">
+            <h1>Food Redistribution Form</h1>
+
+            <label for="DonarName">Donar Name:</label>
+            <input type="text" id="DonarName" required>
+
+            <label for="FoodType">Food Type:</label>
+            <select id="FoodType">
+                <option value="spicy">Spicy</option>
+                <option value="sweet_cold">Sweet & Cold</option>
+                <option value="spicy_hot">Spicy & Hot</option>
+                <option value="cold">Cold</option>
+            </select>
+
+            <label for="other">Any other:</label>
+            <input type="text" id="other">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="urgency">Urgency Level:</label>
+            <select id="urgency">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <h2>Verification and Quality Control</h2>
+            <label for="expiration-date">Expiration Date:</label>
+            <input type="date" id="expiration-date" required>
+
+            <label for="FoodCondition">Food Condition (GOOD / BAD)</label>
+            <input type="text" id="FoodCondition" required>
+
+            <label for="PickupDate">Pickup Date:</label>
+            <input type="date" id="PickupDate" required>
+            <label for="Delivery Method">Delivery Method</label>
+        <select id="Deliver Method">
+            <option value="Direct to Recipents">Direct to Recipents</option>
+            <option value="Distribution Center">Distribution Center</option>
+
+        </select>
+
+        <h2>Communication and outresearch</h2>
+
+        <label for="donor engagement">donor Engagement Activities: </label>
+        <input type="text" id="donarEngagement" required>
+
+        <label for="awarnessPrograms">AwarnessPrograms</label>
+        <input type="text" id="AwarnessPrograms:" required>
+
+        <label for="target Audience">targetAudience</label>
+        <input type="text" id="targetAudience" placeholder="who is your target audience..?" required>
+        
+        <label for="communicationchannels">communicationchannels</label>
+        <select id="communicationchannels">
+            <option  value="SocialMedia">SocialMedia</option>
+            <option value="E-Mail">E-Mail</option>
+            <option value="Flyers">Flyers & Brochures</option>
+            <option value="communityEvent">communityEvent</option>
+
+        </select>
+
+        <h2>Data Management</h2>
+        <label for="donationRecord">DonationRecord</label>
+        <textarea id="donationRecord" rows="3" placeholder="Enter Donation details...." required></textarea>
+        
+        <label for="recipentData">recipentData:</label>
+        <textarea id="recipentData" rows="3" placeholder="Enter Recipent details..." required></textarea>
+
+        <label for="FoodInventory">FoodInventory:</label>
+        <textarea id="FoodInventory" rows="3" placeholder="Enter Food Inventory details..." required></textarea>
+
+        <label for="Data Optimisation">Data Optimisation</label>
+        <textarea id="Data Optimisation" rows="3" placeholder="How do you use  data to reduce waste"></textarea>
+        
+        <h2> Compilence and Reporting</h2>
+        <div class="info-box">
+            <p>Ensures legal compilence with food safty regulations which generates reports on food distribution activities and impact assessments...</p>
+
+        </div>
+        <label for="CompilenceCheckList">Compilence Check List</label>
+        <textarea id="Compilence Check List" rows="4" placeholder="list legal food safty checks..." required></textarea>
+
+        <label for="reporting Perods">Reporting Periods:</label>
+        <input type="date" id="reportingperiod" required>
+
+        <label for="distributionReport">food Distribution Report:</label>
+        <textarea id="date" id="reporting period" required></textarea>
+
+        <label for="impactAssessment">ImpactAssessment: </label>
+        <textarea id="distributionAssessment" rows="4" placeholder="enter the distribution details and impact metrics...">required</textarea>
+
+        <label for="automated matching">automated matching </label>
+        <select id="automated matching">
+            <option value="enabled">Enebled</option>
+            <option value="disabled">Disabled</option>
+        </select>
+        
+        <label for="ntification settings">Notification Settings:</label>
+        <textarea id="notification settings" rows="4" placegolder="notification preference!!.."></textarea>
+
+        <label for="pickupshesule">pickupshedule</label>
+        <input type="datatime-local" id="pickupshedule" >
+
+        <label for="inventorytracking">Inventory Tracking Detaila:</label>
+        <textarea id="inventoryTracking" rows="4" placeholder="tracking methods!!..."></textarea>
+
+
+        <button type="submit">Submit</button>
+        <button type="button" class="back-button" onclick="history.back()">Back to list</button>
+        </form>
+    </div>
+</body>
+</html>

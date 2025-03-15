@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/givezy/static/css/main.9490207e.css",
+    "main.js": "/givezy/static/js/main.bf1f7243.js",
+    "static/js/453.5e87654a.chunk.js": "/givezy/static/js/453.5e87654a.chunk.js",
+    "static/media/banner.jpg": "/givezy/static/media/banner.c3425fd42c8f2d9a6383.jpg",
+    "index.html": "/givezy/index.html",
+    "main.9490207e.css.map": "/givezy/static/css/main.9490207e.css.map",
+    "main.bf1f7243.js.map": "/givezy/static/js/main.bf1f7243.js.map",
+    "453.5e87654a.chunk.js.map": "/givezy/static/js/453.5e87654a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9490207e.css",
+    "static/js/main.bf1f7243.js"
+  ]
+}

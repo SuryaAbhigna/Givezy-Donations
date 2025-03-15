@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="pfp.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Givezy</title>
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        .profile {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <h2>Welcome, Admin!</h2>
+    <div class="header-container" style="text-align: center;">
+        <div class="logo" style="text-align: center; align-content: center;">
+            <img src="admin.jpeg" alt="Admin Logo" />
+        </div>
+
+        <!-- App Name and Search Bar -->
+        <div style="text-align: center;">
+            <h1 class="app-name" style="padding-left: 100;">Givezy Admin Dashboard</h1>
+            <div class="search-bar" style="margin-top: 10px;">
+                <input type="text" placeholder="Search" style="width: 80%; max-width: 600px;">
+            </div>
+        </div>
+
+        <div class="back-button" >
+            <a href="dona.html">LOGOUT</a>
+        </div>
+    </div>
+</header>
+
+
+
+
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#manage-donations">Manage Donations</a></li>
+    <li><a href="#assign-agents">Assign Agents</a></li>
+    <li><a href="#view-reports">View Reports</a></li>
+    <li><a href="#manage-users">Manage Users</a></li>
+  </ul>
+</nav>
+
+<!-- Admin Dashboard Overview Section -->
+<section class="dashboard-overview">
+    <div class="table-container rounded-box">
+        <div class="card">
+            <h3>Total Donations</h3>
+            <p>1200+</p>
+        </div>
+        <div class="card">
+            <h3>Pending Approvals</h3>
+            <p>15</p>
+        </div>
+        <div class="card">
+            <h3>Registered Agents</h3>
+            <p>45</p>
+        </div>
+        <div class="card">
+            <h3>Donor Requests</h3>
+            <p>8 new</p>
+        </div>
+    </div>
+</section>
+
+<!-- Manage Donations Section -->
+<section id="manage-donations" align="center">
+    <h2 style="font-size: 2em;">Manage Donations</h2>
+    <div class="table-container rounded-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Donation ID</th>
+                    <th>Donor Name</th>
+                    <th>Item Type</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>Food</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>Clothing</td>
+                    <td>Completed</td>
+                    <td><button class="view-btn">View Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Assign Agents Section -->
+<section id="assign-agents" align="center">
+    <h2 style="font-size: 2em;">Assign Agents</h2>
+    <div class="table-container rounded-box">
+        <form>
+            <label for="donation-id">Select Donation:</label>
+            <select id="donation-id">
+                <option value="101">Donation 101 - Food</option>
+                <option value="102">Donation 102 - Clothing</option>
+            </select>
+
+            <label for="agent-id">Select Agent:</label>
+            <select id="agent-id">
+                <option value="201">Agent 201 - Alice</option>
+                <option value="202">Agent 202 - Bob</option>
+            </select>
+
+            <button type="submit" class="assign-btn">Assign Agent</button>
+        </form>
+    </div>
+</section>
+
+<!-- View Reports Section -->
+<section id="view-reports" align="center">
+    <h2 style="font-size: 2em;">View Reports</h2>
+    <div class="table-container rounded-box">
+            <h3>Monthly Donations</h3>
+            <p>120 donations this month</p>
+        </div>
+        <div class="table-container rounded-box">
+            <h3>Donation Categories</h3>
+            <p>Food: 50 donations</p>
+            <p>Clothing: 30 donations</p>
+            <p>Books: 20 donations</p>
+        </div>
+    </div>
+        <div>
+            <h3 style="font-size: 2em;">Agent Performance</h3>
+            <p class="table-container rounded-box">Top Agent: Alice with 50 collections</p>
+        </div>
+    </div>
+</section>
+
+<!-- Manage Users Section -->
+<section id="manage-users" align="center">
+    <h2 style="font-size: 2em;">Manage Users</h2>
+    <div class="table-container rounded-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>301</td>
+                    <td>Michael Scott</td>
+                    <td>Donor</td>
+                    <td>Active</td>
+                    <td><button class="deactivate-btn">Deactivate</button></td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>Pam Beesly</td>
+                    <td>Agent</td>
+                    <td>Active</td>
+                    <td><button class="deactivate-btn">Deactivate</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <p>&copy; 2025 Community Redistribution App. All rights reserved.</p>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>
